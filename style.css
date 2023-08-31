@@ -1,0 +1,122 @@
+/* yes i know my css is messy */
+
+@keyframes bgAnim{
+    /* cha cha real smooth */
+  0% {
+      background-position: 0px 0px;
+  }
+  25% {
+      background-position: 128px 128px;
+  }
+  50% {
+      background-position: 256px 0px;
+  }
+  75% {
+      background-position: 128px -128px;
+  }
+}
+
+@media(max-width: 800px){
+    h1 {
+        font-size: 6vw;
+    }
+    footer {
+        width: 20vw;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    .box {
+        font-size: 2.5vw;
+    }
+}
+
+/* standard html tag styling starts here */
+
+body {
+    background-image: url("../resources/router.png");
+    background-repeat: repeat;
+    animation: bgAnim 60s linear infinite;
+    overflow: auto;
+    font-family: 'Audiowide', cursive;
+}
+
+h1 {
+    font-size: 3vw;
+    font-weight: normal;
+}
+
+hr {
+    border: 1px solid #ffd37f;
+}
+
+footer {
+    width: 15vw;
+    position: fixed;
+    left: 1%;
+    bottom: 1%;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.75);
+    color: #fff;
+}
+
+/* link stylising begins here*/
+
+a {
+    color: #ffd37f;
+}
+
+a[href^="http"]::after,
+a[href^="https://"]::after
+{
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-left: 2px;
+  background-image: url("../resources/icons/link.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+a[href^="https://github.com"]::after
+{
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-left: 2px;
+  background-image: url("../resources/icons/github.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+/* link stylising ends here*/
+/* tag stylising ends here */
+/* class stylising starts here */
+
+.gnuLicense {
+    padding: 10%;
+    width: 80%;
+}
+
+.box {
+    margin: 10px auto;
+    max-height: 500px;
+    width: 80%;
+    font-size: 1vw;
+    text-align: center;
+    padding: 2.5vw;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.75);
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
